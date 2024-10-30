@@ -1,0 +1,19 @@
+version: '3.8'
+
+services:
+  cassandra:
+    image: cassandra:latest
+    container_name: cassandra-server
+    networks:
+      - cassandra-network
+    environment:
+      - CASSANDRA_CLUSTER_NAME=my_cluster
+      - CASSANDRA_DC=DC1
+      - CASSANDRA_RACK=RAC1
+      - CASSANDRA_SEEDS=cassandra-server
+    ports:
+      - "9042:9042"
+
+networks:
+  cassandra-network:
+    driver: bridge
