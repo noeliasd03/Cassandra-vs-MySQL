@@ -27,7 +27,7 @@ Para conectarse a los servidores:
 `docker exec -it mysql-server mysql -u root -p` (ingresar contraseña: changeme)
 
 Para cargar los datos en el servidor Cassandra:  
-Ejecutas el script
+Ejecutas el script    
 `python insercion_cassandra.py`  
 Ahora al entrar en el servidor puedes observar los datos  
 `docker exec -it cassandra-server cqlsh`       
