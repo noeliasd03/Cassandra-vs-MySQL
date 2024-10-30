@@ -3,7 +3,7 @@ from cassandra.cluster import Cluster
 from cassandra.query import SimpleStatement
 import os 
 current_dir = os.getcwd()
-csv_file_path = os.path.abspath(os.path.join(current_dir, '..', 'datos.csv'))
+csv_file_path = os.path.abspath(os.path.join(current_dir, 'datos.csv'))
 keyspace = 'store' ## PENDIENTE
 table = 'users'
 df = pd.read_csv(csv_file_path)
