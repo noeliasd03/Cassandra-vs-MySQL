@@ -17,6 +17,10 @@ conda create --name 'name_environment' python=3.7
 `docker-compose -f docker-compose-cassandra.yml up -d`   
 `docker-compose -f docker-compose-mysql.yml up -d`
 
+Para comprobar que los servidores están corriendo:  
+
+`docker ps`
+
 Para conectarse a los servidores:
 
 `docker exec -it cassandra-server cqlsh`     
