@@ -14,11 +14,11 @@ conda create --name 'name_environment' python=3.7
 
 3º levantar servidores Cassandra y MySQL
 
-`docker-compose -f docker-compose-cassandra.yml up -d`
+`docker-compose -f docker-compose-cassandra.yml up -d`   
 `docker-compose -f docker-compose-mysql.yml up -d`
 
 Para conectarse a los servidores:
 
-`docker exec -it cassandra-server cqlsh` 
+`docker exec -it cassandra-server cqlsh`     
 `docker exec -it mysql-server mysql -u root -p`
 
