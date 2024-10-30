@@ -24,5 +24,5 @@ Para comprobar que los servidores están corriendo:
 Para conectarse a los servidores:
 
 `docker exec -it cassandra-server cqlsh`     
-`docker exec -it mysql-server mysql -u root -p` (ingrsar contraseña: changeme)
+`docker exec -it mysql-server mysql -u root -p` (ingresar contraseña: changeme)
 
