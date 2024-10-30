@@ -6,8 +6,12 @@ services:
     container_name: mysql-server
     environment:
       MYSQL_ROOT_PASSWORD: changeme
+      MYSQL_DATABASE: store
+
     networks:
       - mysql-network
+    ports:
+      - "3306:3306"
 
 networks:
   mysql-network:
