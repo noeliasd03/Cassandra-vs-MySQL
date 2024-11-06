@@ -50,7 +50,6 @@ try:
         if connection.is_connected():
             cursor.close()
             connection.close()
-            print("Conexión a MySQL cerrada")
 
 
 except Error as e:

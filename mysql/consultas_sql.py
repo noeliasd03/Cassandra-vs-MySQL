@@ -23,12 +23,11 @@ try:
         '''
         cursor.execute(avg_age_query)
         result = cursor.fetchone()
-        print(f"La media de edad (age) es: {result[0]}")
+        print(f"La media de edad es: {result[0]}")
         
         if connection.is_connected():
             cursor.close()
             connection.close()
-            print("Conexión a MySQL cerrada")
 
 
 except Error as e:

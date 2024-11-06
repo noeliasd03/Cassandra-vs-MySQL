@@ -30,4 +30,7 @@ INSERT INTO {table} (id, name, age, city) VALUES (%s, %s, %s, %s)
 ''')
 for _, row in df.iterrows():
     session.execute(insert_statement, (int(row['id']), row['name'], int(row['age']), row['city']))
+
+print("Datos insertados con éxito en Cassandra")
+
 cluster.shutdown()
