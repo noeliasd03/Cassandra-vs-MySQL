@@ -33,3 +33,10 @@ Ahora al entrar en el servidor puedes observar los datos
 `docker exec -it cassandra-server cqlsh`       
 `use store;`  
 `select * from users;`
+
+Para consultar la media de edad en Cassandra ejecutar:
+`python cassandra/consultas_cassandra.py`
+
+Para consultar la media de edad en MySQL ejecutar:
+`python mysql/consultas_sql.py`
+

@@ -11,7 +11,7 @@ csv_file_path = os.path.join(current_dir, 'datos.csv')  # Esto guarda en el dire
 
 # Generar datos de ejemplo
 fake = Faker()
-num_records = 10
+num_records = 20000
 data = {
     'id': list(range(1, num_records + 1)),
     'name': [fake.name() for _ in range(num_records)],
