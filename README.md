@@ -1,18 +1,17 @@
 # Cassandra-vs-MySQL
 Diferencias de rendimiento entre Cassandra y MySQL.
-conda create --name 'name_environment' python=3.7
 
-# Instrucciones:
+## Instrucciones:
 
-1º crear enviroment   
+1º Crear enviroment   
 
 `conda env create --file config_enviroment.yml`
 
-2º entra en el enviroment   
+2º Entra en el enviroment   
 
 `conda activate basesdatos`
 
-3º levantar servidores Cassandra y MySQL
+3º Levantar servidores Cassandra y MySQL
 
 `docker-compose -f docker-compose-cassandra.yml up -d`   
 `docker-compose -f docker-compose-mysql.yml up -d`
@@ -26,6 +25,7 @@ Para conectarse a los servidores:
 `docker exec -it cassandra-server cqlsh`     
 `docker exec -it mysql-server mysql -u root -p` (ingresar contraseña: changeme)
 
+4º Carga de scipts
 Para cargar los datos en el servidor Cassandra:  
 Ejecutas el script    
 `python cassandra/insercion_cassandra.py`  
@@ -34,9 +34,15 @@ Ahora al entrar en el servidor puedes observar los datos
 `use store;`  
 `select * from users;`
 
+Para cargar los datos en el servidor MySQL:  
+Ejecutas el script    
+`python mysql/insercion_mysql.py`  
+
 Para consultar la media de edad en Cassandra ejecutar:
 `python cassandra/consultas_cassandra.py`
 
 Para consultar la media de edad en MySQL ejecutar:
 `python mysql/consultas_sql.py`
+
+Para poder hacer la comparativa de los tiempos de ejecución abrir 'comparativa.ipynb' y ejecutarlo. 
 
