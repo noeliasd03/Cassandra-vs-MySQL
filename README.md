@@ -46,8 +46,8 @@ Para cargar los datos en el servidor **MySQL**:
 Ejecutas el script    
 `python mysql/insercion_mysql.py`  
 Ahora al entrar en el servidor puedes observar los datos    
-`docker exec -it mysql-server mysql -u root -p` (ingresar contraseña: changeme)
-`use store;`    
+`docker exec -it mysql-server mysql -u root -p` (ingresar contraseña: changeme)         
+`use store;`        
 `select * from users;`
 
 ---
