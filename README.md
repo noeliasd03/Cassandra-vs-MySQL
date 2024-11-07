@@ -18,8 +18,8 @@ Diferencias de rendimiento entre Cassandra y MySQL.
 
 **3º Levantar servidores Cassandra y MySQL**
 
-`docker-compose -f docker-compose-cassandra.yml up -d`   
-`docker-compose -f docker-compose-mysql.yml up -d`
+`docker compose -f docker-compose-cassandra.yml up -d`   
+`docker compose -f docker-compose-mysql.yml up -d`
 
 Para comprobar que los servidores están corriendo:  
 
