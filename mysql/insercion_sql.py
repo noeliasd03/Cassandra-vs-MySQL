@@ -8,14 +8,12 @@ database = 'store'
 user = 'root'
 password = 'changeme'
 
-# Leer el archivo CSV en un DataFrame
 current_dir = os.getcwd()
 csv_file_path = os.path.abspath(os.path.join(current_dir, 'datos.csv'))
 df = pd.read_csv(csv_file_path)
 
 
 try:
-    # Conectarse a la base de datos
     connection = mysql.connector.connect(
         host=host,
         database=database,
