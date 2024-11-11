@@ -4,19 +4,19 @@ from cassandra.query import SimpleStatement
 import os 
 current_dir = os.getcwd()
 csv_file_path = os.path.abspath(os.path.join(current_dir, 'datos.csv'))
-keyspace = 'store' ## PENDIENTE
+keyspace = 'store'
 table = 'users'
 df = pd.read_csv(csv_file_path)
-cluster = Cluster(['127.0.0.1'])  # PENDIENTE
+cluster = Cluster(['127.0.0.1'])
 session = cluster.connect()
-# Crear el keyspace si no existe
+
 session.execute(f'''
 CREATE KEYSPACE IF NOT EXISTS {keyspace}
 WITH replication = {{'class': 'SimpleStrategy', 'replication_factor': '1'}}
 ''')
-# Conectarse al keyspace
+
 session.set_keyspace(keyspace)
-# Crear la tabla si no existe
+
 session.execute(f'''
 CREATE TABLE IF NOT EXISTS {table} (
     id int PRIMARY KEY,
