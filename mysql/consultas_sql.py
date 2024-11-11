@@ -2,14 +2,13 @@ import pandas as pd
 import mysql.connector
 from mysql.connector import Error
 import os
-# Configurar la conexión a la base de datos
+
 host = '127.0.0.1'  
 database = 'store'
 user = 'root'
 password = 'changeme'
 
 try:
-    # Conectarse a la base de datos
     connection = mysql.connector.connect(
         host=host,
         database=database,
